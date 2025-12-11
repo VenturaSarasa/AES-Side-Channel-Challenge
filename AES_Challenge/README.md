@@ -97,6 +97,7 @@ def generar_archivo_python():
 
 if __name__ == "__main__":
     generar_archivo_python()
+```
 
 ### Opción B: Convertir todo a TXT (Para ver los números "en claro")
 Si prefieres tener un archivo de texto gigante (`dataset_completo.txt`) con todos los datos para leerlos o importarlos en otro programa (Matlab, Excel, C++...), crea un archivo llamado `exportar_txt.py` con el siguiente código y ejecútalo:
