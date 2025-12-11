@@ -22,8 +22,8 @@ Tu misión es utilizar técnicas de **Análisis de Canal Lateral (SCA)**, como *
 
 ### Especificaciones del Dataset (.npz)
 El archivo contiene dos arrays alineados (el índice 0 de uno corresponde al 0 del otro):
-1.  **`plaintext`**: Array de `(1000, 16)`. Contiene los bytes de entrada (enteros 0-255).
-2.  **`traces`**: Array de `(1000, 3500)`. Contiene los puntos flotantes del consumo de energía.
+1.  **`plaintext`**: Array de `(500, 16)`. Contiene los bytes de entrada (enteros 0-255).
+2.  **`traces`**: Array de `(500, 3500)`. Contiene los puntos flotantes del consumo de energía.
 
 ---
 
