@@ -32,6 +32,8 @@ El archivo contiene dos arrays alineados (el índice 0 de uno corresponde al 0 d
 ### Opción A: Usar Python (Recomendado para el ataque)
 Si vas a programar tu ataque en Python (scikit-learn, tensorflow, scripts propios), esta es la forma más rápida y directa de cargar los pares.
 
+```python
+
 import numpy as np
 import sys
 
