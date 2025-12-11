@@ -170,6 +170,6 @@ El archivo debe contener obligatoriamente:
     * *Nota:* El código debe ser funcional y reproducir la obtención de la clave.
 2.  **La Flag:** Un archivo de texto llamado `flag.txt` que contenga únicamente la flag final.
     * Ejemplo de contenido: `CTF{7v3v...}`
-3.  **Informe:** Explicación de la estrategía seguida para la consecución del ataque, así como de la técnica de criptoanalisis escogida.
+3.  **Informe:** Explicación de la estrategía seguida para la consecución del ataque, así como de la técnica de criptoanálisis escogida.
 ---
 **¡Happy Hacking!** 🕵️‍♂️💻
