@@ -18,7 +18,7 @@ Tu misión es utilizar técnicas de **Análisis de Canal Lateral (SCA)**, como *
 
 ## 📂 Contenido del Repositorio
 
-* **`aes_challenge_public.npz`**: El archivo principal con el dataset completo (optimizado para ocupar poco espacio). Contiene las 1.000 trazas y sus textos asociados.
+* **`aes_challenge_public.npz`**: El archivo principal con el dataset completo. Contiene las 1.000 trazas y sus textos asociados.
 * **`trace_combined_view.png`**: Una imagen de referencia para que veas cómo luce la señal eléctrica y el ruido.
 
 ### Especificaciones del Dataset (.npz)
