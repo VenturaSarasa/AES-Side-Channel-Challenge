@@ -169,8 +169,7 @@ El archivo debe contener obligatoriamente:
 1.  **El Código Fuente:** Tu script de Python (`solve.py`) o Jupyter Notebook (`.ipynb`) utilizado para realizar el ataque.
     * *Nota:* El código debe ser funcional y reproducir la obtención de la clave.
 2.  **La Flag:** Un archivo de texto llamado `flag.txt` que contenga únicamente la flag final.
-    * Ejemplo de contenido: `CTF{2b7e...}`
-3.  **Breve Informe (Opcional):** Si has utilizado una técnica distinta al CPA estándar (como Deep Learning o Template Attacks), incluye un pequeño párrafo explicando tu estrategia.
-
+    * Ejemplo de contenido: `CTF{7v3v...}`
+3.  **Informe:** Explicación de la estrategía seguida para la consecución del ataque, así como de la técnica de criptoanalisis escogida.
 ---
 **¡Happy Hacking!** 🕵️‍♂️💻
