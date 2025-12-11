@@ -63,7 +63,7 @@ def generar_archivo_python():
         f.write("print('Cargando arrays gigantes en memoria... espere un momento.')\n\n")
 
         # 2. Escribir Plaintexts (Es rápido)
-        f.write("# --- LISTA DE PLAINTEXTS (1000 muestras x 16 bytes) ---\n")
+        f.write("# --- LISTA DE PLAINTEXTS (500 muestras x 16 bytes) ---\n")
         f.write("# Variable: plaintexts\n")
         f.write("plaintexts = np.array([\n")
         
@@ -74,7 +74,7 @@ def generar_archivo_python():
         f.write("], dtype=np.uint8)\n\n")
 
         # 3. Escribir Trazas (La parte pesada)
-        f.write("# --- LISTA DE TRAZAS DE POTENCIA (1000 muestras x 3500 puntos) ---\n")
+        f.write("# --- LISTA DE TRAZAS DE POTENCIA (500 muestras x 3500 puntos) ---\n")
         f.write("# Variable: traces\n")
         f.write("traces = np.array([\n")
         
