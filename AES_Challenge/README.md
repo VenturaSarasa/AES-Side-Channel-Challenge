@@ -1,7 +1,6 @@
 # 🕵️ The Silent Whisper: Desafío de Canal Lateral (AES-128)
 
-> **Categoría:** Criptografía / Side-Channel Analysis (SCA)  
-> **Dificultad:** Intermedia  
+> **Categoría:** Criptografía / Side-Channel Analysis (SCA)    
 > **Objetivo:** Recuperar la Clave Secreta AES  
 
 ## 📜 Escenario
