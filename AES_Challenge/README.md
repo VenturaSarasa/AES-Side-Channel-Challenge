@@ -32,6 +32,70 @@ El archivo contiene dos arrays alineados (el índice 0 de uno corresponde al 0 d
 ### Opción A: Usar Python (Recomendado para el ataque)
 Si vas a programar tu ataque en Python (scikit-learn, tensorflow, scripts propios), esta es la forma más rápida y directa de cargar los pares.
 
+import numpy as np
+import sys
+
+# Configuración
+INPUT_FILE = 'aes_challenge_public.npz'
+OUTPUT_FILE = 'dataset_completo.py' # Este será el archivo final para los participantes
+
+def generar_archivo_python():
+    print(f"📂 Cargando datos de {INPUT_FILE}...")
+    
+    try:
+        data = np.load(INPUT_FILE)
+        plaintexts = data['plaintext']
+        traces = data['traces']
+    except FileNotFoundError:
+        print("❌ Error: No se encuentra el archivo .npz")
+        return
+
+    total = len(plaintexts)
+    print(f"✅ Datos cargados: {total} trazas.")
+    print(f"⚠️  Generando '{OUTPUT_FILE}'. Esto creará un archivo de código MUY grande (>50MB).")
+    print("⏳ Escribiendo... (Paciencia, puede tardar unos segundos)")
+
+    with open(OUTPUT_FILE, "w") as f:
+        # 1. Cabecera e imports
+        f.write("import numpy as np\n\n")
+        f.write("print('Cargando arrays gigantes en memoria... espere un momento.')\n\n")
+
+        # 2. Escribir Plaintexts (Es rápido)
+        f.write("# --- LISTA DE PLAINTEXTS (1000 muestras x 16 bytes) ---\n")
+        f.write("# Variable: plaintexts\n")
+        f.write("plaintexts = np.array([\n")
+        
+        for i, p in enumerate(plaintexts):
+            # Convertimos a lista simple [1, 2, 3...]
+            f.write(f"    {list(p)}, # ID: {i}\n")
+            
+        f.write("], dtype=np.uint8)\n\n")
+
+        # 3. Escribir Trazas (La parte pesada)
+        f.write("# --- LISTA DE TRAZAS DE POTENCIA (1000 muestras x 3500 puntos) ---\n")
+        f.write("# Variable: traces\n")
+        f.write("traces = np.array([\n")
+        
+        for i, t in enumerate(traces):
+            # Formateamos los floats para que ocupen menos (4 decimales)
+            # Ejemplo: [0.1234, -1.5432, ...]
+            valores_str = ", ".join([f"{x:.4f}" for x in t])
+            f.write(f"    [{valores_str}], # ID: {i}\n")
+            
+            # Barra de progreso visual en tu consola
+            if i % 50 == 0:
+                print(f"   -> Escribiendo traza {i}/{total}...")
+
+        f.write("], dtype=np.float32)\n\n")
+        
+        f.write("print('✅ ¡Datos cargados correctamente! Variables disponibles: plaintexts, traces')\n")
+
+    print(f"✅ ¡TERMINADO! Se ha creado '{OUTPUT_FILE}'.")
+    print("   Ahora puedes subir este archivo o pasárselo a los participantes.")
+
+if __name__ == "__main__":
+    generar_archivo_python()
+
 ### Opción B: Convertir todo a TXT (Para ver los números "en claro")
 Si prefieres tener un archivo de texto gigante (`dataset_completo.txt`) con todos los datos para leerlos o importarlos en otro programa (Matlab, Excel, C++...), crea un archivo llamado `exportar_txt.py` con el siguiente código y ejecútalo:
 
