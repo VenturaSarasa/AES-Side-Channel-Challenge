@@ -8,8 +8,8 @@
 Nuestros agentes han interceptado un dispositivo seguro mientras realizaba operaciones de cifrado AES-128. Aunque el algoritmo AES es matemáticamente seguro, el hardware donde se ejecuta **tiene una fuga de información**: su consumo de energía varía sutilmente dependiendo de los datos que procesa.
 
 Hemos logrado capturar:
-1.  **1.000 Trazas de Potencia:** Mediciones del consumo eléctrico del chip durante el cifrado.
-2.  **1.000 Plaintexts:** Los mensajes de texto original (16 bytes) que entraron al chip.
+1.  **500 Trazas de Potencia:** Mediciones del consumo eléctrico del chip durante el cifrado.
+2.  **500 Plaintexts:** Los mensajes de texto original (16 bytes) que entraron al chip.
 
 Tu misión es utilizar técnicas de **Análisis de Canal Lateral (SCA)**, como *Correlation Power Analysis (CPA)* o *Deep Learning*, para encontrar la correlación entre los textos y el consumo, y así extraer la **Clave Secreta de 16 bytes**.
 
