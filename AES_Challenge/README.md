@@ -157,3 +157,20 @@ def exportar_todo_a_txt():
 
 if __name__ == "__main__":
     exportar_todo_a_txt()
+
+```
+
+## 📨 Instrucciones de Entrega
+
+Para dar por completado el reto, debes preparar un archivo comprimido (`.zip` o `.tar.gz`) con el nombre formato: `Nombre_Apellido_AES_Challenge.zip`.
+
+El archivo debe contener obligatoriamente:
+
+1.  **El Código Fuente:** Tu script de Python (`solve.py`) o Jupyter Notebook (`.ipynb`) utilizado para realizar el ataque.
+    * *Nota:* El código debe ser funcional y reproducir la obtención de la clave.
+2.  **La Flag:** Un archivo de texto llamado `flag.txt` que contenga únicamente la flag final.
+    * Ejemplo de contenido: `CTF{2b7e...}`
+3.  **Breve Informe (Opcional):** Si has utilizado una técnica distinta al CPA estándar (como Deep Learning o Template Attacks), incluye un pequeño párrafo explicando tu estrategia.
+
+---
+**¡Happy Hacking!** 🕵️‍♂️💻
